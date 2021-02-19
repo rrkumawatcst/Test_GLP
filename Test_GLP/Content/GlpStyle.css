@@ -1,0 +1,161 @@
+.ProjectTitle {
+    text-align: center;
+    font-size: 30px;
+    width: auto;
+    background-color: #566068;
+    color:#eeeeee;
+    padding-top : 10px;
+    padding-bottom : 10px;
+}
+.Menubar
+{
+    background-color: black;
+    width:auto;
+    height: 10px;
+}
+
+    .Menubar ul {
+        list-style-type: none;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        background-color: #b91f45;
+    }
+.Menubar ul li 
+{
+    float: left;
+}
+.Menubar ul li a
+{
+    display: block;
+    color: white;
+    text-align: center;
+    padding :7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+    font-size: 18px;
+}
+.Menubar ul li a:hover
+{
+    background-color:cadetblue;
+}
+
+/* CSS For Account Page And Registration Page*/
+.CreateAccountPage {
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 20px;
+    border-style: solid;
+    border-width: 1px;
+    align-content: center;
+    background-color: #1d214a;
+    box-shadow: 10px 10px 10px #353655;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 25px;
+}
+
+    .CreateAccountPage .FormTitle {
+        font-size: 20px;
+        background-color: #b91f45;
+        color: white;
+        padding-left: 20px;
+        width: auto;
+        padding-top:10px;
+        padding-bottom:10px;
+        margin-bottom: 10px;
+        text-align:center;
+        border-radius:10px;
+    }
+.CreateInputTable .CellRight {
+    float: right;
+    color: snow;
+    padding-top: 10px;
+}
+
+
+/* CSS For Slot Page*/
+
+.CreateSlot
+{
+    margin-top: 7%;
+    margin-left: 37%;
+    margin-right: 37%;
+    padding: 20px;
+    border-width:1px;
+    border-style:solid;
+}
+
+.CreateSlot .CellRight
+{
+    float: right;
+    padding-top: 10px;
+}
+
+.CreateSlot .FormTitle
+{
+    font-size: 20px;
+    background-color:brown;
+    color: white;
+    padding-left: 20px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.DataTableStyle
+{
+    margin:25px;
+    border-style: solid;
+    border-width: 1px;
+    height: 200px;
+    padding: 20px;
+}
+
+.DataTableStyle .TableHeader
+{
+    background-color: cadetblue;
+    color:white;
+}
+
+.DataTableStyle .TableHeader th
+{
+    padding-left: 20px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-right:20px;
+}
+
+.DataTableStyle .TableRows th
+{
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.DataTableStyle .UpdateButton
+{
+    background-color: forestgreen;
+    color: white;
+    color: white;
+    padding-bottom: 10px;
+}
+.DataTableStyle .DeleteButton
+{
+    background-color:indianred;
+    color: white;
+    padding-bottom: 10px;
+}
+
+/*Message Bar*/
+.MessageBar
+{
+    display:block;
+    background-color : yellow;
+    color : black;
+    text-align:center;
+    padding-left : 20px;
+    width:auto;
+    font-family : Arial;
+    font-size:large;
+    border-radius:3px;
+}

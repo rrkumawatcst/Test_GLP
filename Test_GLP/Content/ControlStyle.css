@@ -1,0 +1,53 @@
+﻿.OuterBox {
+    /*margin-left: 10%;
+    margin-top: 10%;
+    margin-right: auto;
+    padding: 10%;
+    background-color: darkslategray*/
+}
+
+.OuterBox input[type="text"] {
+    border-style: none;
+    border-bottom-style: solid;
+    font-family: sans-serif;
+    font-size: larger;
+    text-align: center;
+    border-bottom-color: white;
+    background-color: #1d214a;
+    color: white;
+    margin-left: 20px;
+}
+
+.OuterBox input[type="text"]:focus {
+    border-bottom-color: whitesmoke;
+    text-decoration-line: none;
+}
+.OuterBox label {
+    color: white;
+
+    font-size: larger;
+}
+
+.OuterBox .buttonbox {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #28a745;
+    color: #fff;
+    border: 1px solid transparent;
+    font-size: 17px;
+    border-radius: 0.25rem;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-left:20px;
+    height: 35px;
+    width: auto;
+}
+
+   .OuterBox.buttonbox:hover {
+        color: #fff;
+        background-color: #218838;
+        border-color: #1e7e34;
+    }

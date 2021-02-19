@@ -1,0 +1,40 @@
+﻿@using Test_GLP.Models
+@model Account
+@{
+    ViewBag.Title = "CreateAccount";
+    Layout = "~/Views/Master/main_layout.cshtml";
+}
+<meta name="viewport" content="width=device-width" />
+<link href="@Url.Content("~/Content/GLPStyle.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/ControlStyle.css")" rel="stylesheet" type="text/css" />
+<div class="CreateAccountPage">
+    <div class="FormTitle">
+        Create Account
+    </div>
+    <div class="OuterBox">
+        @Html.AntiForgeryToken()
+        @using (Html.BeginForm("RegisterAccount", "Account", FormMethod.Post))
+        {
+            <table class="CreateInputTable">
+                <tr>
+                    <td class="CellRight"><label>Enter Name</label></td>
+                    <td class="TextControl">@Html.TextBoxFor(m => m.USER_NAME)</td>
+                </tr>
+                <tr>
+                    <td class="CellRight"><label>Enter Password</label></td>
+                    <td>@Html.TextBoxFor(m => m.USER_PASS)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        
+                        <input type="submit" value="Create Account" id="btnSubmit" class="buttonbox" />
+                    </td>
+                </tr>
+            </table>
+        }
+    </div>
+    <div style="background-color:yellow;color:black;padding-left:20px;display:block;border-radius:3px;margin-top:25px;">
+        <h3>@ViewBag.message</h3>
+    </div>
+</div>
