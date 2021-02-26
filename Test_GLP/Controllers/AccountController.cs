@@ -18,14 +18,18 @@ namespace Test_GLP.Controllers
 
         public ActionResult RegisterAccount(Account acc)
         {
-            int i = new Account().createAccount(acc);
-            if (i == 1)
+            if(ModelState.IsValid)
             {
-                ViewBag.message = "Account Create Successfully";
-            }
-            else if (i == 2)
-            {
-                ViewBag.message = "Account Update Successfully";
+                int i = new Account().createAccount(acc);
+                if (i == 1)
+                {
+                    ViewBag.message = "Account Create Successfully";
+                }
+                else if (i == 2)
+                {
+                    ViewBag.message = "Account Update Successfully";
+                }
+                return View("CreateAccount");
             }
             return View("CreateAccount");
         }

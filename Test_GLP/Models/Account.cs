@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Collections;
+using System.ComponentModel.DataAnnotations;
 using GLP.SqlDBClass;
 
 namespace Test_GLP.Models
 {
     public class Account
     {
+        [Required]
+        [Display(Name ="User Name")]
         public String USER_NAME { get; set; }
+
+        [Required]
+        [Display(Name ="Password")]
         public String USER_PASS { get; set; }
 
         Hashtable ht;

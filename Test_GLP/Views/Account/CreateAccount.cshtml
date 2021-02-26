@@ -13,26 +13,42 @@
     </div>
     <div class="OuterBox">
         @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new {@class="text-danger"})
         @using (Html.BeginForm("RegisterAccount", "Account", FormMethod.Post))
         {
-            <table class="CreateInputTable">
-                <tr>
-                    <td class="CellRight"><label>Enter Name</label></td>
-                    <td class="TextControl">@Html.TextBoxFor(m => m.USER_NAME)</td>
-                </tr>
-                <tr>
-                    <td class="CellRight"><label>Enter Password</label></td>
-                    <td>@Html.TextBoxFor(m => m.USER_PASS)</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        
-                        <input type="submit" value="Create Account" id="btnSubmit" class="buttonbox" />
-                    </td>
-                </tr>
-            </table>
+        <table class="CreateInputTable">
+            <tr>
+                <td class="CellRight"><label>Enter Name</label></td>
+                <td class="TextControl">
+                    @Html.EditorFor(m => m.USER_NAME)
+                </td>
+            </tr>
+            <tr>
+                <td class="CellRight"><label>Enter Password</label></td>
+                <td class="TextControl">
+                    @Html.EditorFor(m => m.USER_PASS)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Create Account" id="btnSubmit" class="buttonbox" onclick="ChangeColor()" />
+                </td>
+            </tr>
+        </table>
         }
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td></td>
+                <td style="background-color:white;color:red;font-size:large">@Html.ValidationMessageFor(model => model.USER_NAME, "", new { @class = "ValidationMessage" })</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="background-color:white;color:red;font-size:large">@Html.ValidationMessageFor(model => model.USER_PASS, "", new { @class = "ValidationMessage" })</td>
+            </tr>
+        </table>
     </div>
     <div style="background-color:yellow;color:black;padding-left:20px;display:block;border-radius:3px;margin-top:25px;">
         <h3>@ViewBag.message</h3>
